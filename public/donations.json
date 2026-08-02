@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-21",
+  "donations": [
+    {
+      "id": "d-eth-ccee4775",
+      "displayName": "",
+      "anonymous": true,
+      "amount": "0.025",
+      "currency": "eth",
+      "channel": "crypto",
+      "donatedAt": "2026-05-20T16:00:00Z",
+      "txUrl": "https://etherscan.io/tx/0xccee4775bf82b29d733f45af38837066bc2e3dc34408900c59ec8355a8af8963",
+      "published": true
+    },
+    {
+      "id": "d-btc-703341b0",
+      "displayName": "",
+      "anonymous": true,
+      "amount": "0.00007508",
+      "currency": "btc",
+      "channel": "crypto",
+      "donatedAt": "2026-03-29T13:45:48Z",
+      "txUrl": "https://chain.so/tx/BTC/703341b0034b5bf5e26d5e9d6b287d42620a01f8493d89c7b2a80189f82c2f17",
+      "published": true
+    },
+    {
+      "id": "d-eth-0312eb56",
+      "displayName": "",
+      "anonymous": true,
+      "amount": "0.0074823",
+      "currency": "eth",
+      "channel": "crypto",
+      "donatedAt": "2026-04-04T00:00:00Z",
+      "txUrl": "https://etherscan.io/tx/0x0312eb567e9f5c7d2098a543b27cd9771cd88e7e44db359886a91116093fbd9e",
+      "published": true
+    },
+    {
+      "id": "d-btc-0561cd3f",
+      "displayName": "",
+      "anonymous": true,
+      "amount": "0.000105",
+      "currency": "btc",
+      "channel": "crypto",
+      "donatedAt": "2025-11-24T07:42:51Z",
+      "txUrl": "https://chain.so/tx/BTC/0561cd3f5963f1c549e6987e01b8398a01ce6ab82846d6d4b1f5eb4a72a4ef67",
+      "published": true
+    },
+    {
+      "id": "d-btc-50c05a7c",
+      "displayName": "",
+      "anonymous": true,
+      "amount": "0.00004515",
+      "currency": "btc",
+      "channel": "crypto",
+      "donatedAt": "2025-09-05T23:37:11Z",
+      "txUrl": "https://chain.so/tx/BTC/50c05a7c73347eb9bae5eb5f36a5adfb7ecb5a7b5e9eba5c33b3cbbe9a8a1fbc",
+      "published": true
+    },
+    {
+      "id": "d-eth-512acc68",
+      "displayName": "",
+      "anonymous": true,
+      "amount": "0.04802339",
+      "currency": "eth",
+      "channel": "crypto",
+      "donatedAt": "2025-12-16T00:00:00Z",
+      "txUrl": "https://etherscan.io/tx/0x512acc68bb54e44e469a35c703795a3d4a1ec85ec337706863b9be9d715f35bf",
+      "published": true
+    },
+    {
+      "id": "d-doge-58036c3c",
+      "displayName": "",
+      "anonymous": true,
+      "amount": "475",
+      "currency": "doge",
+      "channel": "crypto",
+      "donatedAt": "2025-12-21T08:28:14Z",
+      "txUrl": "https://dogechain.info/tx/bf01594b2d3d4d913b5b8afc22a30d99bfe411367df0a2ad3856cba858036c3c",
+      "published": true
+    },
+    {
+      "id": "d-eth-cfe63b64",
+      "displayName": "",
+      "anonymous": true,
+      "amount": "0.02",
+      "currency": "eth",
+      "channel": "crypto",
+      "donatedAt": "2025-11-24T00:00:00Z",
+      "txUrl": "https://etherscan.io/tx/0xcfe63b645943f6b232a2abaa28f7be72a657d17ff083bb0d48964c4efe337282",
+      "published": true
+    },
+    {
+      "id": "d-btc-8d2eada9",
+      "displayName": "",
+      "anonymous": true,
+      "amount": "0.00055",
+      "currency": "btc",
+      "channel": "crypto",
+      "donatedAt": "2024-01-28T08:17:50Z",
+      "txUrl": "https://chain.so/tx/BTC/8d2eada9241660639dd5bcb03bfbfce6286970a765b0401f9663cc28be9aaed3",
+      "published": true
+    },
+    {
+      "id": "d-doge-ddaefc32",
+      "displayName": "",
+      "anonymous": true,
+      "amount": "500",
+      "currency": "doge",
+      "channel": "crypto",
+      "donatedAt": "2024-08-10T04:04:49Z",
+      "txUrl": "https://dogechain.info/tx/71bb53eba61a70bc3fc9290b60d1b66e5dba5bc10ce54ed7b0880ce8ddaefc32",
+      "published": true
+    },
+    {
+      "id": "d-doge-13e6e029",
+      "displayName": "",
+      "anonymous": true,
+      "amount": "250",
+      "currency": "doge",
+      "channel": "crypto",
+      "donatedAt": "2024-05-03T09:12:41Z",
+      "txUrl": "https://dogechain.info/tx/4d12a1d780fcba9ebe380241eb53f123eed4fe9c0dadb271209152e113e6e029",
+      "published": true
+    },
+    {
+      "id": "d-doge-e5aaa0b3",
+      "displayName": "",
+      "anonymous": true,
+      "amount": "448",
+      "currency": "doge",
+      "channel": "crypto",
+      "donatedAt": "2023-12-09T09:37:01Z",
+      "txUrl": "https://dogechain.info/tx/3202aa2963dfc4a47170b32491f816a3161aec6ad206b4bfc78f8d5ae5aaa0b3",
+      "published": true
+    },
+    {
+      "id": "d-doge-9bf57318",
+      "displayName": "",
+      "anonymous": true,
+      "amount": "100",
+      "currency": "doge",
+      "channel": "crypto",
+      "donatedAt": "2023-11-26T04:19:33Z",
+      "txUrl": "https://dogechain.info/tx/1cc70b64cc0a4531b22fc76a8e3b93fe9d5cb5c74cb8f6efda97202c9bf57318",
+      "published": true
+    },
+    {
+      "id": "d-doge-0b7c1d00",
+      "displayName": "",
+      "anonymous": true,
+      "amount": "496",
+      "currency": "doge",
+      "channel": "crypto",
+      "donatedAt": "2023-11-20T14:52:31Z",
+      "txUrl": "https://dogechain.info/tx/c4d0c255e4799e36fe3eece843f4bdc12860600367269b2ebe9cc79b0b7c1d00",
+      "published": true
+    },
+    {
+      "id": "d-doge-2c304203",
+      "displayName": "",
+      "anonymous": true,
+      "amount": "400",
+      "currency": "doge",
+      "channel": "crypto",
+      "donatedAt": "2023-11-19T00:51:25Z",
+      "txUrl": "https://dogechain.info/tx/befb1fa2088585d60b1764e8bcd349cd87cb45a018196dab0b1048b32c304203",
+      "published": true
+    }
+  ]
+}

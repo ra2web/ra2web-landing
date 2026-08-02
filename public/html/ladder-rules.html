@@ -51,24 +51,21 @@
             <section>
                 <h2>基本规则</h2>
                 <ul>
-                    <li>完成 5 场定级赛后，将被分入一个最多 100 名实力相近玩家的段位。</li>
-                    <li>获胜可获得天梯积分（LP），用于在段位内提升名次。</li>
-                    <li>获胜还会提升你的 MMR（匹配等级），用于决定你的军衔徽章和段位。</li>
-                    <li>赢得足够场次即可晋升更高军衔。</li>
-                    <li>活跃与不活跃玩家均可获得额外奖励积分（BP），每 100 分钟获得 1 点。</li>
-                    <li>奖励积分可通过对战消耗，使胜利获得的 LP 翻倍，并抵消失败损失的 LP。</li>
+                    <li>支持队列：<strong>1v1</strong> 与 <strong>2v2 随机</strong>。</li>
+                    <li>新账号初始天梯积分 / MMR 均为 <strong>1000</strong>。</li>
+                    <li>完成 <strong>5</strong> 场定级赛后获得军衔；定级期间不计军衔显示。</li>
+                    <li>对局结算会同时更新<strong>天梯积分（LP）</strong>与 <strong>MMR</strong>。军衔由天梯积分决定；匹配主要参考 MMR。</li>
+                    <li>积分变动基于 Elo：正常对局 K=64，定级赛 K=256；失败额外按约 1.1 倍扣分。越级爆冷时变动会放大。</li>
+                    <li>奖励积分（BP）随时间累积：每满 1 小时 +1，上限 100。BP 仅用于<strong>抵消失败损失的 LP</strong>（至少保留 1 点损失），不会翻倍胜利收益。</li>
                 </ul>
             </section>
             <section>
-                <h2>登顶之路</h2>
+                <h2>军衔与统帅</h2>
                 <ul>
-                    <li>段位系统中的最高军衔为准将，授予服务器前约 4% 的玩家。</li>
-                    <li>服务器 MMR 前 50 名玩家可进入专属「将军」天梯，争夺最高荣誉徽章。详见<a href="#ranks">军衔对照表</a>。</li>
-                    <li>要获得晋升将军的资格，玩家需达到最低 MMR，且在本赛季过去 3 周内至少进行 20 场对局。</li>
-                    <li>晋升于服务器时间每晚 22:00 发放。玩家从特殊「候选」天梯中晋升，该天梯包含服务器 MMR 前 100 名符合资格的玩家。</li>
-                    <li>降级于服务器时间每晚 19:00 执行。未达要求的玩家以及排名后约 10% 的玩家将被降至更低段位。符合资格的玩家可在下一轮晋升中重新获得名额。</li>
-                    <li>将军天梯中仅按 MMR 排名，以最准确反映实力。天梯积分与奖励积分不参与计算。</li>
-                    <li>赛季结束前一周，所有天梯晋升将被锁定。在此期间，玩家将专注于在当前段位内争取最佳名次直至赛季结束。</li>
+                    <li>军衔按天梯积分阈值划分，1v1 / 2v2 使用同一套阈值。</li>
+                    <li><strong>统帅</strong>为全服唯一：需完成定级且积分 ≥ 2200，仅积分最高者保有该军衔；其余达到阈值者显示为五星上将。</li>
+                    <li>统帅榜首每小时衰减：已定级统帅约 <strong>−1</strong> 积分/小时；未完成定级但积分 ≥ 2200 的临时榜首约 <strong>−50</strong> 积分/小时，直至跌破 2200 或失去榜首。</li>
+                    <li>积分接近下一军衔下限、进度低于约 10% 时，界面会提示处于降级边缘。</li>
                 </ul>
             </section>
             <section class="ranks" id="ranks">
@@ -78,93 +75,65 @@
                         <thead>
                             <tr>
                                 <th>军衔</th>
-                                <th>最低 MMR <br/>1v1 美/欧</th>
-                                <th>最低 MMR <br/>1v1 东南亚</th>
-                                <th>最低 MMR <br/>2v2 美/欧</th>
-                                <th>最低 MMR <br/>2v2 东南亚</th>
-                                <th>占比</th>
+                                <th>天梯积分（LP）</th>
+                                <th>说明</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
+                                <td>未定级</td>
+                                <td>—</td>
+                                <td>定级赛未满 5 场</td>
+                            </tr>
+                            <tr>
                                 <td>列兵</td>
-                                <td>&lt;1340</td>
-                                <td>&lt;1330</td>
-                                <td>&lt;1310</td>
-                                <td>&lt;1310</td>
-                                <td>~8%</td>
+                                <td>&lt; 1100</td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>下士</td>
-                                <td>1340</td>
-                                <td>1330</td>
-                                <td>1310</td>
-                                <td>1310</td>
-                                <td>~17%</td>
+                                <td>1100 – 1199</td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>中士</td>
-                                <td>1420</td>
-                                <td>1430</td>
-                                <td>1410</td>
-                                <td>1410</td>
-                                <td>~17%</td>
+                                <td>1200 – 1299</td>
+                                <td></td>
                             </tr>
                             <tr>
-                                <td>中尉</td>
-                                <td>1480</td>
-                                <td>1500</td>
-                                <td>1470</td>
-                                <td>1470</td>
-                                <td>~20%</td>
+                                <td>少尉</td>
+                                <td>1300 – 1399</td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>少校</td>
-                                <td>1560</td>
-                                <td>1580</td>
-                                <td>1540</td>
-                                <td>1540</td>
-                                <td>~17%</td>
+                                <td>1400 – 1549</td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>上校</td>
-                                <td>1650</td>
-                                <td>1670</td>
-                                <td>1660</td>
-                                <td>1650</td>
-                                <td>~17%</td>
+                                <td>1550 – 1699</td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>准将</td>
-                                <td>1880</td>
-                                <td>1890</td>
-                                <td>2040</td>
-                                <td>1950</td>
-                                <td>~4%</td>
+                                <td>1700 – 1849</td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>将军</td>
-                                <td>2050</td>
-                                <td>2050</td>
-                                <td>2040</td>
-                                <td>1950</td>
-                                <td>前 50 名</td>
+                                <td>1850 – 1999</td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>五星上将</td>
-                                <td>2150</td>
-                                <td>2150</td>
-                                <td>2150</td>
-                                <td>2150</td>
-                                <td>前 5 名</td>
+                                <td>2000 – 2199</td>
+                                <td>含达到统帅阈值但非榜首者</td>
                             </tr>
                             <tr>
-                                <td>总司令</td>
-                                <td>2300</td>
-                                <td>2300</td>
-                                <td>2300</td>
-                                <td>2300</td>
-                                <td>第 1 名</td>
+                                <td>统帅</td>
+                                <td>≥ 2200</td>
+                                <td>全服唯一（积分最高且已定级）</td>
                             </tr>
                         </tbody>
                     </table>
@@ -199,79 +168,57 @@
                             </tr>
                             <tr>
                                 <td>超级武器</td>
+                                <td>关</td>
+                            </tr>
+                            <tr>
+                                <td>可在盟友旁建造</td>
+                                <td>开</td>
+                            </tr>
+                            <tr>
+                                <td>可摧毁桥梁</td>
                                 <td>开</td>
                             </tr>
                         </tbody>
                     </table>
                     <table>
-                        <tr>
-                            <td>多工程师才能占领</td>
-                            <td>开</td>
-                        </tr>
-                        <tr>
-                            <td>禁止狗杀工程师</td>
-                            <td>开</td>
-                        </tr>
-                        <tr>
-                            <td>游戏速度</td>
-                            <td>6</td>
-                        </tr>
-                        <tr>
-                            <td>初始资金</td>
-                            <td>10000</td>
-                        </tr>
-                        <tr>
-                            <td>初始单位数量</td>
-                            <td>0</td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>多工程师才能占领</td>
+                                <td>关</td>
+                            </tr>
+                            <tr>
+                                <td>禁止狗杀工程师</td>
+                                <td>关</td>
+                            </tr>
+                            <tr>
+                                <td>瞬间占领</td>
+                                <td>开</td>
+                            </tr>
+                            <tr>
+                                <td>延迟油井</td>
+                                <td>关</td>
+                            </tr>
+                            <tr>
+                                <td>游戏速度</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>初始资金</td>
+                                <td>10000</td>
+                            </tr>
+                            <tr>
+                                <td>初始单位数量</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </section>
             </section>
             <section class="map-pool">
                 <h2>地图池</h2>
-                <h3>1v1</h3>
+                <p>当前 1v1 / 2v2 共用同一地图池：</p>
                 <ul>
-                    <li>Heck Freezes Over LE（2-4）</li>
-                    <li>Pinch Point LE（2）</li>
-                    <li>Jungle of Vietnam LE（2-4）</li>
-                    <li>South Pacific（2-4）</li>
-                    <li>Official Tournament Map B（2）<em>— 仅镜像对阵</em></li>
-                    <li>Stormy Weather LE（2）</li>
-                    <li>Malibu Cliffs LE（2）</li>
-                    <li>Tour of Egypt（2-6）<em>— 仅镜像对阵</em></li>
-                    <li>Caverns of Siberia LE（2-4）</li>
-                    <li>Lost Lake（2-4）<em>— 仅镜像对阵</em></li>
-                    <li>Offense Defense（yuri original）（2-4）</li>
-                    <li>Country Swing LE（2-4）<em>— 仅镜像对阵</em></li>
-                    <li>Dorado Descent YR Port（2-4）</li>
-                    <li>Desert Island LE（2-4）</li>
-                    <li>Arabian Oasis（YR Port）（2）</li>
-                    <li>Divide and Conquer（2-4）</li>
-                    <li>Golden State Freeway LE</li>
-                    <li>Poltergeist LE（PreCaptured）（2）</li>
-                    <li>Under Pressure（PreCaptured）（2）</li>
-                    <li>Frozen Fate（YR Port）（2-4）</li>
-                </ul>
-                <h3>2v2</h3>
-                <ul>
-                    <li>Country Swing LE（2-4）</li>
-                    <li>Offense Defense（yuri original）（2-4）</li>
-                    <li>Snowdrop（2-4）</li>
-                    <li>Desert Island LE（2-4）</li>
-                    <li>Heck Freezes Over Corners（2-4）</li>
-                    <li>Tour of Egypt（2-6）</li>
-                    <li>Dorado Descent YR Port（2-4）</li>
-                    <li>Coldest Peak（2-4）</li>
-                    <li>Red Valley（YR Port）（2-4）</li>
-                    <li>Interstellar（2-4）</li>
-                    <li>Dawn of Peril LE（2-4）</li>
-                    <li>South Pacific（2-4）</li>
-                    <li>Dune Patrol Remake（2-4）</li>
-                    <li>Jungle of Vietnam LE（2-4）</li>
-                    <li>Lake Island（2-4）</li>
-                    <li>Caverns of Siberia LE（2-4）</li>
-                    <li>Yin Yang LE（2-4）</li>
-                    <li>Divide and Conquer（2-4）</li>
+                    <li>Heck Freezes Over（<code>mp02t2.map</code>）</li>
                 </ul>
             </section>
         </main>

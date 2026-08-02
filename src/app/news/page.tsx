@@ -1,34 +1,10 @@
 import SubpageLayout from '@/components/SubpageLayout';
 import Link from 'next/link';
 import NewsTag from '@/components/NewsTag';
-
-const API_BASE = 'https://gongheguozhihui-news-api.huangkaoya.workers.dev/api';
-
-async function getNews() {
-  try {
-    const url = `${API_BASE}/news?limit=20&tag=ra2web`;
-    const res = await fetch(url, { 
-      cache: 'no-store', // 暂时禁用缓存测试
-      headers: {
-        'Accept': 'application/json',
-        'User-Agent': 'Mozilla/5.0 (compatible; Ra2Web/1.0)'
-      }
-    });
-    
-    if (!res.ok) {
-      const errorText = await res.text();
-      console.error(`Fetch news failed with status ${res.status}: ${errorText}`);
-      return [];
-    }
-    return await res.json();
-  } catch (e: any) {
-    console.error('Fetch news network error:', e.message);
-    return [];
-  }
-}
+import { fetchNewsList } from '@/lib/cms';
 
 export default async function NewsPage() {
-  const news = await getNews();
+  const news = await fetchNewsList({ limit: 20 });
 
   return (
     <SubpageLayout title="新闻中心">
@@ -39,7 +15,7 @@ export default async function NewsPage() {
         </div>
 
         <div className="flex flex-col border-t border-gray-100">
-          {news.map((item: any) => (
+          {news.map((item) => (
             <Link 
               key={item.id} 
               href={`/news/${item.slug}`}
@@ -56,7 +32,7 @@ export default async function NewsPage() {
                 <div className="flex items-center gap-2">
                   <span className="hidden sm:inline italic">作者：{item.author || 'Ra2Web'}</span>
                   <span className="w-1 h-1 bg-gray-300 rounded-full hidden sm:inline"></span>
-                  <span className="font-mono tracking-tight">{new Date(item.published_at).toLocaleDateString()}</span>
+                  <span className="font-mono tracking-tight">{new Date(item.published_at || '').toLocaleDateString()}</span>
                 </div>
                 <span className="text-[#ff9408] font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                   阅读全文 →
@@ -75,4 +51,3 @@ export default async function NewsPage() {
     </SubpageLayout>
   );
 }
-

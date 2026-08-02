@@ -9,10 +9,10 @@ interface TagProps {
 
 const tagStyles: Record<string, string> = {
   '公告': 'bg-[#ff9408]/10 text-[#ff9408] border-[#ff9408]/20',
-  '新闻': 'bg-blue-600/10 text-blue-600 border-blue-600/20',
-  '百科': 'bg-emerald-600/10 text-emerald-600 border-emerald-600/20',
-  '活动': 'bg-purple-600/10 text-purple-600 border-purple-600/20',
-  'default': 'bg-gray-600/10 text-gray-600 border-gray-600/20'
+  '新闻': 'bg-blue-400/10 text-blue-400 border-blue-400/25',
+  '百科': 'bg-emerald-400/10 text-emerald-400 border-emerald-400/25',
+  '活动': 'bg-purple-400/10 text-purple-400 border-purple-400/25',
+  'default': 'bg-slate-400/10 text-slate-400 border-slate-400/25'
 };
 
 export default function NewsTag({ category, className = "" }: TagProps) {
@@ -24,4 +24,3 @@ export default function NewsTag({ category, className = "" }: TagProps) {
     </span>
   );
 }
-

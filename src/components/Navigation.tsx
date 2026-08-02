@@ -12,7 +12,7 @@ const NAV_ITEMS = [
   { href: '#community', label: '社区' },
   { href: '#media', label: '频道' },
   { href: '/news', label: '新闻中心', isPageLink: true },
-  { href: 'https://game.ra2web.com/', label: '点此开玩！', isExternal: true },
+  { href: 'https://staging.wangerhuoda.cn', label: '点此开玩！', isExternal: true },
 ];
 
 export default function Navigation() {

@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="w-64 h-[2px] bg-[#ff9408] mx-auto"></div>
         <div className="py-6">
           <a 
-            href="https://game.ra2web.com/" 
+            href="https://staging.wangerhuoda.cn" 
             target="_blank" 
             rel="nofollow" 
             className="launch_game inline-block"

@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <main>
       {isLoading && (
-        <div id="loader-wrapper" className="fixed top-0 left-0 w-full h-full z-[1000] bg-[#222222]">
+        <div id="loader-wrapper" className="fixed top-0 left-0 w-full h-full z-[1000] bg-[#07111d]">
           <div id="loader" className="block relative left-1/2 top-1/2 w-[240px] h-[240px] -ml-[120px] -mt-[120px] rounded-full border-[3px] border-solid border-transparent border-t-[#3498db] animate-spin duration-[2s] z-[1001]"></div>
           <div id="loader-logo" className="absolute top-0 left-0 w-full h-full z-[10000] bg-[url('/img/cd-logo.png')] bg-no-repeat bg-center"></div>
         </div>
@@ -36,7 +36,7 @@ export default function Home() {
         <div className="layout-frame m-0 auto w-full block">
           <Navigation />
           <Banner />
-          <div className="bgcolor h-[74px] w-full bg-gradient-to-b from-[#f9fafb] to-[#e1e4e7]"></div>
+          <div className="bgcolor h-[74px] w-full bg-gradient-to-b from-[#06111d] to-[#081522]"></div>
           <div id="container" className="overflow-hidden w-full">
             <About />
             <Features />

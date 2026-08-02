@@ -1,30 +1,14 @@
+import { fetchNewsBySlug } from '@/lib/cms';
+import { normalizeEditorContent } from '@/lib/content-normalize';
 import SubpageLayout from '@/components/SubpageLayout';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import ShareBar, { MobileShareBar } from '@/components/ShareBar';
 import NewsTag from '@/components/NewsTag';
 
-const API_BASE = 'https://gongheguozhihui-news-api.huangkaoya.workers.dev/api';
-
-async function getPost(slug: string) {
-  try {
-    const res = await fetch(`${API_BASE}/news/${slug}`, { 
-      cache: 'no-store',
-      headers: {
-        'Accept': 'application/json',
-        'User-Agent': 'Mozilla/5.0 (compatible; Ra2Web/1.0)'
-      }
-    });
-    if (!res.ok) return null;
-    return await res.json();
-  } catch (e) {
-    return null;
-  }
-}
-
 export default async function NewsDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = await getPost(slug);
+  const post = await fetchNewsBySlug(slug);
 
   if (!post) {
     notFound();
@@ -51,7 +35,7 @@ export default async function NewsDetail({ params }: { params: Promise<{ slug: s
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
-                发布于 {new Date(post.published_at).toLocaleDateString()}
+                发布于 {new Date(post.published_at || '').toLocaleDateString()}
               </span>
             </div>
           </div>
@@ -71,9 +55,9 @@ export default async function NewsDetail({ params }: { params: Promise<{ slug: s
               </div>
             )}
 
-            <div 
-              className="prose prose-lg max-w-none prose-slate prose-headings:text-[#ff9408] prose-a:text-[#ff9408] prose-strong:text-gray-900 leading-relaxed whitespace-pre-wrap"
-              dangerouslySetInnerHTML={{ __html: post.content }}
+            <div
+              className="news-content leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: normalizeEditorContent(post.content) }}
             />
 
             <MobileShareBar />
@@ -83,7 +67,7 @@ export default async function NewsDetail({ params }: { params: Promise<{ slug: s
                 <span className="group-hover:-translate-x-1 transition-transform">←</span> 返回新闻中心
               </Link>
               <div className="text-xs text-gray-400 font-mono">
-                最后更新：{new Date(post.updated_at).toLocaleString()}
+                最后更新：{new Date(post.updated_at || '').toLocaleString()}
               </div>
             </footer>
           </div>
@@ -92,4 +76,3 @@ export default async function NewsDetail({ params }: { params: Promise<{ slug: s
     </SubpageLayout>
   );
 }
-

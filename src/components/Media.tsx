@@ -27,8 +27,8 @@ export default function Media() {
         
         {/* Video Section */}
         <div className="max-w-3xl mx-auto mb-12">
-          <div className="bg-white border-4 border-white shadow-xl">
-            <div className="relative pb-[56.25%] h-0 overflow-hidden border border-[#d0d0d0]">
+          <div className="bg-[#07131f] border-4 border-[#1f3b56] shadow-xl">
+            <div className="relative pb-[56.25%] h-0 overflow-hidden border border-[#2d4a66]">
               <iframe 
                 className="absolute top-0 left-0 w-full h-full"
                 src="//player.bilibili.com/player.html?isOutside=true&aid=408967329&bvid=BV1VG411i7c9&cid=1344632796&p=1"
@@ -44,10 +44,10 @@ export default function Media() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
           {screenshots.map((screenshot, index) => (
             <div key={index} className="overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <div className="p-1 bg-white">
+              <div className="p-1 bg-[#07131f] border border-[#1f3b56]">
                 <button 
                   onClick={() => setActiveImg(screenshot.full)}
-                  className="w-full h-full block border border-[#d0d0d0] overflow-hidden"
+                  className="w-full h-full block border border-[#2d4a66] overflow-hidden"
                 >
                   <Image 
                     src={screenshot.thumb} 
@@ -76,8 +76,8 @@ export default function Media() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <div className="p-4 bg-white max-w-4xl mx-auto">
-              <div className="border border-[#d0d0d0]">
+            <div className="p-4 bg-[#07131f] border border-[#1f3b56] max-w-4xl mx-auto">
+              <div className="border border-[#2d4a66]">
                 <Image 
                   src={activeImg} 
                   alt="游戏截图大图" 
