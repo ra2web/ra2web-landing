@@ -11,7 +11,7 @@ export default function Community() {
       <div className="container mx-auto px-4 max-w-[1100px]">
         <h2 className="text-4xl md:text-[50px] font-normal uppercase font-['Oswald',sans-serif] leading-[60px] text-center mb-8">社区</h2>
         <p className="text-center max-w-2xl mx-auto mb-8 text-[#b9c7d4]">
-          从微信公众号 思牛逼 获取各类周边资讯（包括加速器、攻略、QQ群等）。
+          从微信公众号 王二火大 获取各类周边资讯（包括加速器、攻略、QQ群等）。
         </p>
         <div className="w-64 h-[2px] bg-[#ff9408] mx-auto mb-12"></div>
         
@@ -52,7 +52,7 @@ export default function Community() {
             className="mx-auto rounded-lg shadow-lg"
             style={{ display: 'none' }} // 如果有二维码图片，可以移除这个样式
           />
-          <p className="mt-4 text-[#b9c7d4]">扫描关注微信公众号<strong>思牛逼</strong>获取更多资讯</p>
+          <p className="mt-4 text-[#b9c7d4]">扫描关注微信公众号<strong>王二火大</strong>获取更多资讯</p>
         </div>
       </div>
     </section>

@@ -115,7 +115,7 @@ export default function About() {
                       <p className="pt-7 pb-5 text-[#aebdca] leading-6">当前已经支持联机、单机，游戏地图持续增加中，并支持游玩自定义地图，而且可以免费查看对战录像回放。</p>
                       <p className="text-[#aebdca] leading-6">
                         你可以在 <Link href="/news" className="text-[#ff9408] hover:text-[#ff9408] hover:underline">新闻中心</Link> 
-                        查看游戏更新的最新情报，或者微信关注公众号 思牛逼 获取各类周边资讯（包括加速器、攻略、QQ群等）。
+                        查看游戏更新的最新情报，或者微信关注公众号 王二火大 获取各类周边资讯（包括加速器、攻略、QQ群等）。
                       </p>
                     </div>
                     <div className="clear-both"></div>

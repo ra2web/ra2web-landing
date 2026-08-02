@@ -106,7 +106,7 @@ export default function Support() {
           红色井界™ 能够成功运作离不开 ChronoDivide 的可持续发展，基础设施（服务器、带宽）等都需要不菲的费用来维持运转，您如果觉得好玩，还请为 ChronoDivide 捐款！
         </p>
         <p className="mb-8 text-[14px] text-[#b9c7d4] max-w-3xl mx-auto">
-          为了满足跨国资金流动需要，确保捐赠可以透明地支持到 ChronoDivide 作者，我们决定采用加密货币的形式，目前支持BTC、ETH、DOGE三种加密货币，以及支持按月订阅（类似于充电）的Buy Me A Coffee，下方的地址直接为 ChronoDivide 作者账户，您可以在区块链上透明地查看到每一笔捐助。如果您不知道如何操作，可以微信关注公众号 思牛逼 了解加密货币基础知识，再次感谢您的关注和支持！
+          为了满足跨国资金流动需要，确保捐赠可以透明地支持到 ChronoDivide 作者，我们决定采用加密货币的形式，目前支持BTC、ETH、DOGE三种加密货币，以及支持按月订阅（类似于充电）的Buy Me A Coffee，下方的地址直接为 ChronoDivide 作者账户，您可以在区块链上透明地查看到每一笔捐助。如果您不知道如何操作，可以微信关注公众号 王二火大 了解加密货币基础知识，再次感谢您的关注和支持！
         </p>
         <div className="w-64 h-[2px] bg-[#ff9408] mx-auto"></div>
         
